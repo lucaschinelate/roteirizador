@@ -29,3 +29,8 @@
   <input type="text" name="renavan" value="{{isset($veiculo->renavan) ? $veiculo->renavan : '' }}">
   <label>RENAVAN</label>
 </div>
+
+<div class="input-field">
+  <input type="text" name="TIPO_VEICULOS_id" value="{{isset($veiculo->TIPO_VEICULOS_id) ? $veiculo->TIPO_VEICULOS_id : '' }}">
+  <label>TIPO VEICULOS</label>
+</div>

@@ -32,3 +32,8 @@
   <input type="text" name="tipo_contrato" value="{{isset($motorista->tipo_contrato) ? $motorista->tipo_contrato : '' }}">
   <label>TIPO DE CONTRATO</label>
 </div>
+
+<div class="input-field">
+  <input type="text" name="PESSOAS_id" value="{{isset($motorista->PESSOAS_id) ? $motorista->PESSOAS_id : '' }}">
+  <label>COD PESSOA</label>
+</div>

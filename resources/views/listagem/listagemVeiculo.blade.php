@@ -16,6 +16,7 @@
             <th>MODELO</th>
             <th>CHASSI</th>
             <th>RENAVAN</th>
+            <th>TIPO VEICULO</th>
             <th>EDITAR</th>
             <th>DELETAR</th>
           </tr>
@@ -31,6 +32,7 @@
                 <td>{{$veiculos->modelo}}</td>
                 <td>{{$veiculos->chassi}}</td>
                 <td>{{$veiculos->renavan}}</td>
+                <td>{{$veiculos->TIPO_VEICULOS_id}}</td>
                 <td>
                   <a class="btn deep-orange" href="{{route('layout.editar', $veiculos->id)}}">Editar</a>
                 </td>

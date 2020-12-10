@@ -9,6 +9,6 @@ class Veiculos extends Model
     //public $timestamps = false;
 
     protected $fillable = [
-        'marca','km_rodado','ano','modelo','capacida_peso','capacidade_cubagem','chassi','renavan'
+        'marca','km_rodado','ano','modelo','capacida_peso','capacidade_cubagem','chassi','renavan', 'TIPO_VEICULOS_id'
     ];
 }
