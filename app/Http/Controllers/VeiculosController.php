@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Veiculos;
 use App\Filiais;
 use App\FiliaisVeiculos;
+
 use Illuminate\Support\Facades\DB;
 
 class VeiculosController extends Controller
@@ -40,7 +41,24 @@ class VeiculosController extends Controller
 
       $dados = $req->all();
 
+      //dd($dados['idFilial']);
+      //dd($dados['id']);
+      $filial[] = $dados['idFilial'];
+
+      //dd($filial);
+
       Veiculos::create($dados);
+
+      $idVeiculo = $dados['id'];
+
+      foreach($filial as $filiais){
+          //dd(intval($filiais));
+          //dd(intval($idVeiculo));
+
+        //$idFilial[] = $filiais;
+          //dd($idFilial);
+       FiliaisVeiculos::create(['FILIAL_id' => $filiais, 'VEICULO_id' => intval($idVeiculo)]);
+      }
 
       return redirect()->route('listagem.veiculo');
 

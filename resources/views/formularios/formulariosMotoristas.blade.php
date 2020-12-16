@@ -40,7 +40,7 @@
 </div>
 
 
-  <select multiple name="idFilial">
+  <select multiple name="idFilial[]">
      <option value="" disabled>Escolha um CNPJ</option>
       @foreach($filiais as $filial)
         <option value="{{isset($filial->id) ? $filial->id : ''}}">{{$filial->cnpj}}</option>
