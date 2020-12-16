@@ -1,3 +1,4 @@
+
 <div class="input-field">
   <input type="text" name="cpf" value="{{isset($motorista->cpf) ? $motorista->cpf : '' }}">
   <label>CPF</label>
@@ -37,3 +38,11 @@
   <input type="text" name="PESSOAS_id" value="{{isset($motorista->PESSOAS_id) ? $motorista->PESSOAS_id : '' }}">
   <label>COD PESSOA</label>
 </div>
+
+
+  <select multiple name="idFilial">
+     <option value="" disabled>Escolha um CNPJ</option>
+      @foreach($filiais as $filial)
+        <option value="{{isset($filial->id) ? $filial->id : ''}}">{{$filial->cnpj}}</option>
+      @endforeach
+    </select>

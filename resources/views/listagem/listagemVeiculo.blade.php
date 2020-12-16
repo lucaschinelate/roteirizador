@@ -34,7 +34,7 @@
                 <td>{{$veiculos->renavan}}</td>
                 <td>{{$veiculos->TIPO_VEICULOS_id}}</td>
                 <td>
-                  <a class="btn deep-orange" href="{{route('layout.editar', $veiculos->id)}}">Editar</a>
+                  <a class="btn deep-orange" href="{{route('layout.editarVeiculo', $veiculos->id)}}">Editar</a>
                 </td>
                 <td>
                   <a class="btn red" href="#">Deletar</a>

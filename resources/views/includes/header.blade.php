@@ -7,6 +7,10 @@
     <!--Import materialize.css-->
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
 
 
     <!--Let browser know website is optimized for mobile-->
@@ -24,6 +28,8 @@
             <li><a href="/site">HOME</a></li>
             <li><a href="{{route('listagem.veiculo')}}">VEICULOS</a></li>
             <li><a href="{{route('listagem.motorista')}}">MOTORISTA</a></li>
+            <li><a href="{{route('listagem.filiais')}}">FILIAIS</a></li>
+            <li><a href="#">EMPRESAS</a></li>
           </ul>
           </div>
     </nav>

@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Veiculos;
-
+use App\Filiais;
+use App\FiliaisVeiculos;
+use Illuminate\Support\Facades\DB;
 
 class VeiculosController extends Controller
 {
@@ -17,15 +19,21 @@ class VeiculosController extends Controller
 
     public function listaVeiculo(){
 
+      //$model = new Veiculos();
+      //var_dump($model->teste());
+      //exit();
+
       $veiculo = Veiculos::all();
-      //dd($veiculo->all());
 
       return view('listagem.listagemVeiculo', compact('veiculo'));
     }
 
     public function adicionar(){
 
-      return view('layout.adicionarVeiculo');
+      $filiais = Filiais::all();
+      $veiculos = Veiculos::all();
+
+      return view('layout.adicionarVeiculo',compact('filiais','veiculos'));
     }
 
     public function salvar(Request $req){
@@ -41,7 +49,8 @@ class VeiculosController extends Controller
     public function editar($id){
 
       $veiculo = Veiculos::find($id);
-      return view('layout.editarVeiculo', compact('veiculo'));
+      $filiais = Filiais::all();
+      return view('layout.editarVeiculo', compact('veiculo', 'filiais'));
     }
 
     public function atualizar(Request $req, $id){
