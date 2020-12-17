@@ -1,5 +1,10 @@
 
 <div class="input-field">
+  <input type="number" name="id" value="{{isset($motorista->id) ? $motorista->id : '' }}">
+  <label>ID</label>
+</div>
+
+<div class="input-field">
   <input type="text" name="cpf" value="{{isset($motorista->cpf) ? $motorista->cpf : '' }}">
   <label>CPF</label>
 </div>

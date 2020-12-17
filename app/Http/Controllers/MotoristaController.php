@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Motoristas;
 use App\Filiais;
+use App\FiliaisMotoristas;
 
 
 class MotoristaController extends Controller
@@ -56,7 +57,17 @@ class MotoristaController extends Controller
 
           $dados = $req->all();
 
+          //dd($dados['idFilial']);
+          $idMotorista = (int)$dados['id'];
+
           Motoristas::create($dados);
+
+          foreach ($dados['idFilial'] as $filial) {
+
+            FiliaisMotoristas::create(['FILIAL_id' => (int)$filial, 'MOTORISTA_id' => $idMotorista]);
+
+          }
+
 
           return redirect()->route('listagem.motorista');
         }
