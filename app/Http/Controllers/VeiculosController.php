@@ -41,24 +41,15 @@ class VeiculosController extends Controller
 
       $dados = $req->all();
 
-      //dd($dados['idFilial']);
-      //dd($dados['id']);
-      $filial[] = $dados['idFilial'];
-
-      //dd($filial);
-
       Veiculos::create($dados);
 
-      $idVeiculo = $dados['id'];
+      $idVeiculo = (int)$dados['id'];
 
-      foreach($filial as $filiais){
-          //dd(intval($filiais));
-          //dd(intval($idVeiculo));
+      foreach($dados['idFilial'] as $filial){
 
-        //$idFilial[] = $filiais;
-          //dd($idFilial);
-       FiliaisVeiculos::create(['FILIAL_id' => $filiais, 'VEICULO_id' => intval($idVeiculo)]);
+       FiliaisVeiculos::create(['FILIAL_id' => (int)$filial, 'VEICULO_id' => $idVeiculo]);
       }
+
 
       return redirect()->route('listagem.veiculo');
 
