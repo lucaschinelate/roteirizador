@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Filiais;
+use App\Empresas;
 
 class FiliaisController extends Controller
 {
@@ -19,7 +20,10 @@ class FiliaisController extends Controller
 
     public function adicionar(){
 
-      return view('layout.adicionarFilial');
+      $empresas = Empresas::all();
+
+
+      return view('layout.adicionarFilial', compact('empresas'));
     }
 
 
@@ -51,7 +55,7 @@ class FiliaisController extends Controller
 
     }
 
-    
+
 
 
 }
