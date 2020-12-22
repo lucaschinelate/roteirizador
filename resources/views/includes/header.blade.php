@@ -30,7 +30,7 @@
             <li><a href="{{route('listagem.motorista')}}">MOTORISTA</a></li>
             <li><a href="{{route('listagem.filiais')}}">FILIAIS</a></li>
             <li><a href="{{route('listagem.empresa')}}">EMPRESAS</a></li>
-            <li><a href="#">PRAÇA</a></li>
+            <li><a href="{{route('listagem.praca')}}">PRAÇA</a></li>
             <li><a href="{{route('listagem.rota')}}">ROTA</a></li>
             <li><a href="{{route('listagem.regiao')}}">REGIÃO</a></li>
           </ul>

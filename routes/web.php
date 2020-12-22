@@ -62,3 +62,7 @@ Route::post('layout/salvarRota', ['as' => 'layout.salvar', 'uses' => 'RotaContro
 Route::get('/layout/editarRota/{id}', ['as' => 'layout.editar', 'uses' => 'RotaController@editar']);
 Route::put('/layout/atualizarRota/{id}', ['as' => 'layout.atualizar', 'uses' => 'RotaController@atualizar']);
 Route::get('layou/excluirRota/{id}', ['as' => 'layout.excluir', 'uses' => 'RotaController@excluir']);
+
+Route::get('/listagemPraca', ['as' => 'listagem.praca', 'uses' => 'PracaController@listaPraca']);
+Route::get('/layout/adicionarPraca', ['as' => 'layout.adicionarPraca', 'uses' => 'PracaController@adicionar']);
+Route::post('layout/salvarPraca', ['as' => 'layout.salvarPraca', 'uses' => 'PracaController@salvar']);
