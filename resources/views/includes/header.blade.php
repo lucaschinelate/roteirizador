@@ -33,6 +33,7 @@
             <li><a href="{{route('listagem.praca')}}">PRAÇA</a></li>
             <li><a href="{{route('listagem.rota')}}">ROTA</a></li>
             <li><a href="{{route('listagem.regiao')}}">REGIÃO</a></li>
+            <li><a href="{{route('listagem.cidade')}}">CIDADES</a></li>
           </ul>
           </div>
     </nav>

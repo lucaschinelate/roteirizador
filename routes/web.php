@@ -66,3 +66,9 @@ Route::get('layou/excluirRota/{id}', ['as' => 'layout.excluir', 'uses' => 'RotaC
 Route::get('/listagemPraca', ['as' => 'listagem.praca', 'uses' => 'PracaController@listaPraca']);
 Route::get('/layout/adicionarPraca', ['as' => 'layout.adicionarPraca', 'uses' => 'PracaController@adicionar']);
 Route::post('layout/salvarPraca', ['as' => 'layout.salvarPraca', 'uses' => 'PracaController@salvar']);
+
+Route::get('listagemCidades', ['as' => 'listagem.cidade', 'uses' => 'CidadesController@listaCidade']);
+Route::get('/layout/adicionarCidade', ['as' => 'layout.adicionarCidade', 'uses' => 'CidadesController@adicionar']);
+Route::post('/layout/salvarCidade', ['as' => 'layout.salvarCidade', 'uses' => 'CidadesController@salvar']);
+Route::get('layout/editarCidade/{id}', ['as' => 'layout.editar', 'uses' => 'CidadesController@editar']);
+Route::put('layout/atualizarCidade/{id}', ['as' => 'layout.atualizarCidade', 'uses' => 'CidadesController@atualizar']);
