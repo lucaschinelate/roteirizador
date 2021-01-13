@@ -2,7 +2,7 @@
 
 <div class="container">
 
-    <h3 ><center>LISTAGEM DE CIDADES </center></h3>
+    <h3 ><center>LISTAGEM DE PAIS </center></h3>
     <br/><br/>
 
     <div class="row">
@@ -10,22 +10,22 @@
         <thead>
           <tr>
             <th>ID</th>
-            <th>NOME CIDADE</th>
+            <th>NOME PAIS</th>
             <th>EDITAR</th>
             <th>DELETAR</th>
           </tr>
         </thead>
         <tbody>
 
-          @foreach($cidade as $cidades)
+          @foreach($paises as $pais)
             <tr>
-              <td>{{$cidades->id}}</td>
-              <td>{{$cidades->nomeCidade}}</td>
+              <td>{{$pais->id}}</td>
+              <td>{{$pais->pais}}</td>
               <td>
-                <a class="btn deep-orange" href="{{route('layout.editarCidade', $cidades->id)}}">Editar</a>
+                <a class="btn deep-orange" href="{{route('layout.editarPais', $pais->id)}}">Editar</a>
               </td>
               <td>
-                <a class="btn red" href="{{route('layout.excluirCidade', $cidades->id)}}">Deletar</a>
+                <a class="btn red" href="{{route('layout.excluirPais', $pais->id)}}">Deletar</a>
               </td>
             </tr>
 
@@ -36,7 +36,7 @@
     </div>
 
     <div class="row">
-      <a class="btn green" href="{{route('layout.adicionarCidade')}}">ADICIONAR CIDADES</a>
+      <a class="btn green" href="{{route('layout.adicionarPais')}}">ADICIONAR CIDADES</a>
     </div>
 </div>
 

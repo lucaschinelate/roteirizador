@@ -1,0 +1,6 @@
+ALTER TABLE `roteirizador`.`juridicas` 
+DROP FOREIGN KEY `fk_JURIDICAS_PESSOAS1`;
+ALTER TABLE `roteirizador`.`juridicas` 
+DROP COLUMN `PESSOAS_id`,
+DROP INDEX `fk_JURIDICAS_PESSOAS1_idx` ;
+;

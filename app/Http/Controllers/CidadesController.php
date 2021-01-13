@@ -30,6 +30,7 @@ class CidadesController extends Controller
       return redirect()->route('listagem.cidade');
     }
 
+
     public function editar($id){
 
       $cidade = cidades::find($id);
@@ -45,5 +46,12 @@ class CidadesController extends Controller
 
       return redirect()->route('listagem.cidade');
 
+    }
+
+    public function excluir($id){
+
+      cidades::find($id)->delete();
+
+      return redirect()->route('listagem.cidade');
     }
 }
