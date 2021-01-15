@@ -2,25 +2,27 @@
 
 <div class="container">
 
-    <h3 ><center>LISTAGEM ENDEREÇOS </center></h3>
+    <h3 ><center>LISTAGEM PESSOAS </center></h3>
     <br/><br/>
 
     <div class="row">
       <table>
         <thead>
           <tr>
-            <th>ID</th>
+            <th>NOME</th>
+            <th>TELEFONE</th>
             <th>EDITAR</th>
             <th>DELETAR</th>
           </tr>
         </thead>
         <tbody>
 
-          @foreach($enderecos as $endereco)
+          @foreach($pessoas as $pessoa)
             <tr>
-              <td>{{$endereco->id}}</td>
+              <td>{{$pessoa->nome}}</td>
+              <td>{{$pessoa->numero_telefone}}</td>
               <td>
-                <a class="btn deep-orange" href="{{route('layout.editarEndereco', $endereco->id)}}">Editar</a>
+                <a class="btn deep-orange" href="#">Editar</a>
               </td>
               <td>
                 <a class="btn red" href="#">Deletar</a>
@@ -34,7 +36,7 @@
     </div>
 
     <div class="row">
-      <a class="btn green" href="{{route('layout.adicionarEndereco')}}">ADICIONAR ENDEREÇO</a>
+      <a class="btn green" href="{{route('layout.adicionarPessoa')}}">ADICIONAR ENDEREÇO</a>
     </div>
 </div>
 

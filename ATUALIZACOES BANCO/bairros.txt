@@ -33,3 +33,8 @@ ADD CONSTRAINT `fk_ENDERECO_PAIS1`
   REFERENCES `roteirizador`.`pais` (`id`)
   ON DELETE NO ACTION
   ON UPDATE NO ACTION;
+
+
+ALTER TABLE `roteirizador`.`bairros` 
+ADD COLUMN `deleted_at` VARCHAR(45) NULL AFTER `updated_at`;
+

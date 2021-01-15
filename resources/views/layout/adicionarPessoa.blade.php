@@ -1,15 +1,15 @@
 @include('includes.header')
 
 <div class="row">
-  <h2><center> TELA CADASTRO DE ENDERECO </center></h2>
+  <h2><center> TELA CADASTRO DE PESSOA </center></h2>
 </div>
 
 <div class="container">
   <div class="row">
-      <form class="" method="post" action="{{route('layout.salvarEndereco')}}" >
+      <form class="" action="#" method="#" >
         {{ csrf_field() }}
 
-        @include('formularios.formularioEndereco')
+        @include('formularios.formularioPessoa')
 
         <button class="btn deep-orange">SALVAR</button>
 

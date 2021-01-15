@@ -9,3 +9,8 @@ ALTER TABLE `roteirizador`.`fisicas`
 DROP COLUMN `PESSOAS_id`,
 DROP INDEX `fk_FISICAS_PESSOAS1_idx` ;
 ;
+
+
+ALTER TABLE `roteirizador`.`fisicas` 
+ADD COLUMN `deleted_at` VARCHAR(45) NULL AFTER `rg`;
+

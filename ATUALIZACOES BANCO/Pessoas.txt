@@ -16,3 +16,6 @@ add column idJuridica int;
 
 alter table pessoas
 add foreign key(idJuridica) references juridicas(id);
+
+ALTER TABLE `roteirizador`.`pessoas` 
+ADD COLUMN `deleted_at` VARCHAR(45) NULL AFTER `idJuridica`;

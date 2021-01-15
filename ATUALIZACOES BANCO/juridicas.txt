@@ -4,3 +4,7 @@ ALTER TABLE `roteirizador`.`juridicas`
 DROP COLUMN `PESSOAS_id`,
 DROP INDEX `fk_JURIDICAS_PESSOAS1_idx` ;
 ;
+
+
+ALTER TABLE `roteirizador`.`juridicas` 
+ADD COLUMN `deleted_at` VARCHAR(45) NULL AFTER `razao_social`;

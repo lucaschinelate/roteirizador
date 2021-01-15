@@ -1,4 +1,8 @@
 ALTER TABLE `roteirizador`.`motoristas` 
+ADD COLUMN `deleted_at` VARCHAR(45) NULL AFTER `created_at`;
+
+
+ALTER TABLE `roteirizador`.`motoristas` 
 ADD COLUMN `updated_at` VARCHAR(45) NULL AFTER `tipo_contrato`,
 ADD COLUMN `created_at` VARCHAR(45) NULL AFTER `updated_at`;
 
@@ -14,3 +18,4 @@ CHANGE COLUMN `ano` `ano` INT(10) NULL DEFAULT NULL ;
 
 UPDATE `roteirizador`.`motoristas` SET `PESSOAS_id` = '1' WHERE (`id` = '1');
 UPDATE `roteirizador`.`motoristas` SET `PESSOAS_id` = '1' WHERE (`id` = '2');
+
