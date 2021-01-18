@@ -6,10 +6,10 @@
 
 <div class="container">
   <div class="row">
-      <form class="" action="#" method="#" >
+      <form class="" action="{{route('layout.salvarPessoaFisica')}}" method="post" >
         {{ csrf_field() }}
 
-        @include('formularios.formularioPessoa')
+        @include('formularios.formularioPessoaFisica')
 
         <button class="btn deep-orange">SALVAR</button>
 
